@@ -1,9 +1,10 @@
-import { productos} from "./productos";
-import './App.css'
-import Navbar from './components/Navbar/Navbar';
+import { productos} from "./products";
+import './App.css';
+import Navbar from "./Navbarcomponents/Navbar/Navbar";
 import CardCustom from "./components/Card";
 import { useEffect, useState } from "react";
 import Itemlist from "./components/ItemList/ItemList";
+import item from "./components/Item/Item";
 
 
 function App() {
@@ -17,12 +18,21 @@ function App() {
           }, 2000)}
       });
   };
+
+
+    const requestJsonPlaceHolder = () => fetch('https://fakestoreapi.com/products')
+
   
   useEffect(()=>{
-      getData()
-      .then((res) => {
-          setProductos(res)
-      });
+    requestJsonPlaceHolder()
+    .then(res => res.json())
+    .then(res => {
+      setProducts(res);
+      setIsLoading(false)
+    })
+     .catch(err => console.log(err))
+
+
   }, []);
 
   return(
@@ -38,6 +48,7 @@ products.map((producto) => (
     nombre={producto.nombre}
     descripcion={producto.descripcion}
     precio={producto.precio}
+    imgUrl={producto.image}
     ></Item>
  ))
 )}
