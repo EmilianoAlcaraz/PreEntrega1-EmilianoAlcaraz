@@ -1,17 +1,35 @@
 
-import "../ItemDetail.css"
-import { Link } from "react-router-dom"
+import ItemDetailsContaner from "../components/itemDetailsCotaner/ItemDetailsContaner"
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
+import Header from '../components/Header/Header'
 
-const ItemCard = ({producto}) => {
+function ItemDetail() {
+    const [products, setProducts] = useState([])
+    const [productSelect, setProductSelect] = useState({})
+    const {id} = useParams()
+
+    const idProductParam = id.toString()
+
+    useEffect(()=>{
+        getData()
+        .then((res) => setProducts(res))
+    }, [])
+
+    useEffect(() => {
+
+        const result = products.find((prod) => prod.id === idProductParam)
+
+        setProductSelect(result)
+    }, [idProductParam, products])
     
-    return(
-        <div className="card">
-            <img src={producto.img} alt={producto.id} className="imgProduct"/>
-            <h2>{producto.id}</h2>
-            <h4>${producto.precio}</h4>
-            <Link to={`/product/${producto.id}`}>Ver detalle</Link>
-        </div>
+
+    return (
+        <>
+            <Header/>
+            <ItemDetailsContaner productSelected = {productSelect}/>
+        </>
     )
 }
 
-export default ItemCard;
+export default ItemDetail

@@ -1,7 +1,6 @@
 import '../ItemDetailContainer.css'
 
 
-
 function ItemDetailsContaner({ productSelected }) {
     return (
         <div className='itemDetailsContaner'>

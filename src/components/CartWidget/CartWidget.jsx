@@ -1,11 +1,11 @@
-import {BsCart4} from 'react-icons/bs'
+import cart from '../../assets/icons/cart.svg'
 
-const CartWidget = () => {
+function CartWidget() {
     return (
-
         <div>
-           <BsCart4/>
+            <span><img src={cart} alt=""/>+99</span>
         </div>
     )
 }
-export default CartWidget;
+
+export default CartWidget
