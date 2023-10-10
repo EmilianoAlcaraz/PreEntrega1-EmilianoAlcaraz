@@ -1,17 +1,17 @@
-const Itemlist = ({children}) => {
-    return(
-        <div
-        style={{
-            display: 'flex',
-            padding: "10 px 25 px",
-            justifyContent: "space-between",
-            flexWrap: "wrap",
-            alignItems: "center",
-        }}
-        >
-            {children}
-         </div>
+const ItemList = ({ children }) => {
+  return (
+    <div
+      style={{
+        padding: "10px 25px",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        flexWrap: "wrap",
+      }}
+    >
+      {children}
+    </div>
   );
 };
 
-export default Itemlist
+export default ItemList;

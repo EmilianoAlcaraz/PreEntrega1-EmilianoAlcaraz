@@ -1,11 +1,12 @@
-.Navbar{
+.navbar{
     width: 100%;
-    height: 120px;
-    background-color: rgb(29, 116, 33);
+    height: 57px;
+    background-color: rgb(44, 107, 38);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 25px ;
+    font-family: cursive;
+    
 }
 
 .styles{
@@ -13,32 +14,8 @@
     padding: 10px;
 }
 
-
-.navbar-list{
-
-    gap: 10px;
-    margin: auto;
-    color: rgb(19, 17, 17);
-    font-size: 25px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display:flex  
-    
-    
-}
-
-
 .titulo{
-   font-family: cursive;
-   padding: 0
-
-}
-
-
-.navbar-item{
-
-    margin: 7%;
-    text-decoration: none;
-    display: flex;
-
-}
-
+    font-family: cursive;
+   
+ }
+ 

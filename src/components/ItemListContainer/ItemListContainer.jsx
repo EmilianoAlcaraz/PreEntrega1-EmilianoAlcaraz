@@ -1,40 +1,19 @@
-import { useState, useEffect } from "react"
-import ItemCard from "../ItemCard/ItemCard"
-import "../ItemListContainer.css"
-import { useParams } from "react-router-dom"
+/* eslint-disable react/prop-types */
+import "./styles.css";
+import { Button } from '@mui/material';
 
 
-const ItemListContaner = () =>{
 
-    const [products, setProducts] = useState([])
-    const {idCategory} = useParams()
-    const [productsSelected, setProductsSelected] = useState([])
+const ItemListContainer = ({router, handleConsole}) => {
 
-    useEffect(()=>{
-        getData()
-        .then((res) => setProducts(res))
-    }, [])
+  return (
+    <div className="container">
+      {router.map((ruta) => (
+        <p key={ruta}>{ruta}</p>
+      ))}
 
-    useEffect(() => {
-        idCategory != undefined ? 
-        
-        setProductsSelected(products.filter((products) => products.category === idCategory))
-        :
-        setProductsSelected(products)
+    </div>
+  );
+};
 
-
-        console.log(productsSelected)
-    }, [idCategory, products])
-
-    return(
-        <div className="contanerCard">
-            {productsSelected.map((prod) =>{
-                return(
-                    <ItemCard key = {prod.id} producto = {prod}/>
-                )
-            })}
-        </div>
-    )
-}
-
-export default ItemListContaner
+export default ItemListContainer;
