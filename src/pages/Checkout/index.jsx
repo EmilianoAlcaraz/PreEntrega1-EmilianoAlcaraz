@@ -22,7 +22,7 @@ const Checkout = () => {
 
       
       Checkout
-      ir a <Link to={'/'}>Home</Link>
+      ir a <Link to={'/'}>Volver a Inicio</Link>
     </h1>
     
   )

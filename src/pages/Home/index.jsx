@@ -34,21 +34,12 @@ const Home = () => {
     className: 'desactivate'
   } : {}
 
-  
-
   return (
     <Layout>
 
       
       <Child mensaje={message} />
       <ChildNoMemo mensaje={message} />
-
-<button onClick={()=> setMessage(message + 1)} >Sumar</button>
-
-
-
-
-
 
 
       <ItemList>

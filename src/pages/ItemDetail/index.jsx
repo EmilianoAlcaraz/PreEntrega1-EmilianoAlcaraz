@@ -32,7 +32,7 @@ const ItemDetail = () => {
           <img src={product.urlImage} />
           <button onClick={()=> addToCart(product.id)}>Añadir al carrito</button>
           <h3>
-            ir a <Link to={"/"}>Home</Link>
+            ir a <Link to={"/"}>Volver al Inicio</Link>
           </h3>
         </>
       )}

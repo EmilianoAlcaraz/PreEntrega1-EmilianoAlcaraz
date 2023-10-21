@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   
 
-  const navegacion = ['Inicio', 'Productos', 'Contacto']
+  const navegacion = ['INICIO', 'PRODUCTOS', 'CONTACTO']
 
   const handleConsole = () => console.log('Aca estoy')
 

@@ -9,7 +9,7 @@ const Item = ({ id, nombre, precio, descripcion, imgUrl }) => {
     // Detiene la propagacion de los eventos por defaults de sus padres
     event.stopPropagation()
 
-    console.log(id, nombre, precio , descripcion)
+    console.log(id, nombre, precio , descripcion, imgUrl)
   }
 
   return (
