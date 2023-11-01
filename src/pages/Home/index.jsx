@@ -50,6 +50,7 @@ const Home = () => {
             id={prod.id}
             nombre={prod.nombre}
             descripcion={prod.descripcion}
+            image={prod.image}
           />
         ))}
       </ItemList>
